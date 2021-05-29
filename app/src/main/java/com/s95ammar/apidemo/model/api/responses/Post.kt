@@ -3,12 +3,14 @@ package com.s95ammar.apidemo.model.api.responses
 import com.google.gson.annotations.SerializedName
 
 data class Post(
-    @SerializedName("id")
-    val id: Int,
     @SerializedName("userId")
-    val userId: Int,
+    val userId: Int?,
     @SerializedName("title")
-    val title: String,
+    val title: String?,
     @SerializedName("body")
-    val body: String
-)
+    val body: String?
+) {
+    @SerializedName("id")
+    var id: Int? = null
+
+}
